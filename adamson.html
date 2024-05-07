@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<title>Universe-City</title>
+
+<style>
+  body { font-family: Arial, sans-serif; background-color: #EDFBFF; }
+  .navbar { display: flex; align-items: center; background-color: #345E7D; padding: 1; margin-bottom: 0; width: 100%; font-size: 1.5rem; position: fixed; z-index: 4; font-size: 18px;}
+  .navbar a { color: white; text-decoration: none; margin: 0 1rem; margin-bottom: 0; }
+  .navbar a:hover { text-decoration: underline; }
+  .navbar img {height: 40px}
+  .nav-links {display: flex; align-items: left;}
+  .search {padding-right: 0;}
+  .university-buttons { display: flex; justify-content: center; margin: 2rem 0; }
+  .university-buttons button { padding: 1rem 2rem; margin: 0 1rem; cursor: pointer; }
+  .university-buttons button:hover { background-color: #ddd; }
+  .feu_logo { height: 4.5%; width: 4.5% ; display: flex; margin-top: auto; margin-bottom: auto; padding-left: 15px; padding: 10px;}
+  .feu_banner { display: flex; padding-top: 1px; background-color: rgb(40, 140, 180); color: white; text-align: center; font-size: 25px; margin-top: 40px; margin-bottom: 0px; width: 100%;  position: fixed; z-index: 3;}
+  .feu_banner h1 { padding: 0px; margin: 0px; display: flex;  margin-top: auto; margin-bottom: auto; font-size: 35px;}
+  .container {position: fixed;}
+  .FEU_background {margin-top: 100px; width: 100%; z-index: 2; position: fixed;height: 100%;}
+  .sidebar_menu {z-index: 99;}
+  .sidebar {
+        margin-top: 0px;
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        right: -200px;
+        background-color: rgb(40, 140, 180);
+        transition: 0.3s;
+        padding-top: 1px;
+        z-index: 10;}
+  .sidebar a {
+        margin: 3px; 
+        padding: 10px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        border-bottom: 1px solid rgb(40, 140, 180);
+        margin-top: 30px;}
+  .sidebar a:hover {background-color: rgb(33, 40, 139);}
+  .content {margin-right: 250px; padding: 20px;}
+  .openbtn {
+        font-size: 10px;
+        cursor: pointer;
+        background-color: rgb(40, 140, 180);
+        color: white;
+        border: none;
+        margin-top: 55px;
+        margin-right: 10px;
+        padding: 10px 15px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 999;}
+  .openbtn:hover { background-color: rgb(40, 140, 180);}
+  .openbtn span { font-size: 25px;}
+  .openbtn span.hide { display: none; }
+  .sidebar_menu a {
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-bottom: 10px;} 
+        .closebtn {
+        padding-left: 150px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        transition: 0.3s;
+        padding-top: 0px;
+        padding-bottom: 6px;
+        cursor: pointer;
+        z-index: 99; }
+    .ekis button{position: absolute; margin-top: -20%; left: 80%; background-color: rgb(4, 75, 4) ;}
+  .closebtn:hover { background-color: rgb(33, 40, 139);}
+
+</style>
+</head> 
+<body>
+
+  <div class="navbar">
+    <a href="#"><img src="logo.png" alt="Universe-city"></a>
+    <div>
+      <a href="front.html">HOME</a>
+      <a href="front.html">COLLEGES</a>
+      <a href="about.html">ABOUT</a>
+    </div>
+
+  </div>
+
+
+  <div class = "feu_banner">
+    <img src="adamson_logo.png" class="feu_logo" alt="FEU_logo">
+    <h1>
+      Adamson University
+    </h1>
+      
+    <div class="sidebar" id="sidebar">
+    <div class="ekis">
+        <p onclick="closeNav()"  class="closebtn"><span>x</span></p>
+        </div>
+      <div class="sidebar_menu">
+        <a href="historyADAMSON.html">HISTORY</a>
+        <a href="locationADAMSON.html">LOCATION</a>
+        <a href="programsADAMSON.html">PROGRAMS</a>
+        <a href="scholarshipADAMSON.html">SCHOLARSHIPS</a>
+        <a href="tuitionDAMSON.html">TUITION FEE</a>
+        <a href="credentialsADAMSON.html">CREDENTIALS</a>
+        <a href="contactADAMSON.html">CONTACT DETAILS</a>
+        <a href="regformADAMSON.html">REGISTRATION FORM</a>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <img src="adamsonBg.jpg" alt="FEU" class="FEU_background" alt="FEU background">
+
+  <div class="content">
+    <button class="openbtn" onclick="openNav()"><span>&#9776;</span></button>
+  </div>
+
+<script>
+
+    document.getElementById('public').addEventListener('click', function() {
+      alert('DIPA TAPOS PINDOT KA NG PINDOT');
+    });
+    document.getElementById('private').addEventListener('click', function() {
+      alert('DIPA TAPOS PINDOT KA NG PINDOT');
+    });
+    function openNav() {
+    document.getElementById("sidebar").style.right = "0";
+    document.querySelector(".openbtn span").classList.add('hide');
+    document.querySelector(".sidebar").classList.add('opened');}
+
+
+    function closeNav() {
+    document.getElementById("sidebar").style.right = "-300px";
+    document.querySelector(".openbtn span").classList.remove('hide');
+    document.querySelector(".sidebar").classList.remove('opened');
+}
+
+</script>
+
+</body>
+</html>

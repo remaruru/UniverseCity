@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Universe-City</title>
+
+<style>
+  body { font-family: Arial, sans-serif; background-color: #EDFBFF; }
+  .navbar { display: flex; align-items: center; background-color: #345E7D; padding: 1; margin-bottom: 0; width: 100%; font-size: 1.5rem; position: fixed; z-index: 4; font-size: 18px;}
+  .navbar a { color: white; text-decoration: none; margin: 0 1rem; margin-bottom: 0; }
+  .navbar a:hover { text-decoration: underline; }
+  .navbar img {height: 40px}
+  .nav-links {display: flex; align-items: left;}
+  .pnu_logo { height: 4.5%; width: 4.5% ; display: flex; margin-top: auto; margin-bottom: auto; padding-left: 15px; padding: 10px;}
+  .pnu_banner { display: flex; padding-top: 1px; background-color: rgb(6, 41, 86); color: white; text-align: center; font-size: 25px; margin-top: 40px; margin-bottom: 0px; width: 100%;  position: fixed; z-index: 3;}
+  .pnu_banner h1 { padding: 0px; margin: 0px; display: flex;  margin-top: auto; margin-bottom: auto; font-size: 35px;}
+  .container {position: fixed;}
+  .PNU_background {margin-top: 100px; width: 100%; z-index: 2; position: fixed;}
+  .sidebar_menu {z-index: 99;}
+  .sidebar {
+        margin-top: 0px;
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        right: -200px;
+        background-color: rgb(6, 41, 86);
+        transition: 0.3s;
+        padding-top: 1px;
+        z-index: 10;}
+  .sidebar a:hover {background-color: rgb(6, 21, 42);}
+  .content {margin-right: 250px; padding: 20px;}
+  .openbtn {
+        cursor: pointer;
+        background-color: rgb(6, 41, 86);
+        color: white;
+        border: none;
+        margin-top: 55px;
+        margin-right: 10px;
+        padding: 10px 15px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 999;}
+  .openbtn:hover { background-color: rgb(6, 41, 86);}
+  .openbtn span { font-size: 25px;}
+  .openbtn span.hide { display: none; }
+  .sidebar_menu a {
+        border-radius: 5px;
+        border: 1px solid rgb(255, 255, 255);
+        margin-bottom: 30px;
+        padding: 10px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        }
+  .closebtn {
+        padding-left: 150px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        transition: 0.3s;
+        padding-top: 0px;
+        padding-bottom: 6px;
+        cursor: pointer;
+        z-index: 99; }
+  .closebtn:hover { background-color: rgb(6, 41, 86);}
+  .textbox{ background: rgb(0, 0, 0,.6) ; height: 580px; width: 96%; margin-top: 100px; position: absolute; left: 2%; right: 2%; z-index: 5;}
+  .textbox h1 {color: white; font-size: 29px; z-index: 6; padding-left:39% ; margin-top: 15px;}
+  .textbox h2 {color: white; font-size: 29px; z-index: 6;}
+  .textbox a {text-decoration: underline; color: white; margin-top: 5px;}
+  .textbox img {height: 380px}
+  .download-button {
+    font-size: 20px;
+    padding: 15px 30px;
+    margin-top: 50px;
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="HOMEPAGE.html"><img src="Universe-city.png" alt="Universe-city"></a>
+    <div>
+      <a href="front.html">HOME</a>
+      <a href="front.html">COLLEGES</a>
+      <a href="front.html">ABOUT</a>
+    </div>
+
+  </div>
+
+
+  <div class = "pnu_banner">
+    <img src="PNU_LOGO.png" class="pnu_logo" alt="PNU_logo">
+    <h1>
+        Philippine Normal University
+    </h1>
+
+    <div class="textbox">
+      <h1>REGISTRATION FORM</h1>
+      <button id="downloadBtn" class="download-button">Download PNU Registration Form</button>
+
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <div>
+        <p onclick="closeNav()" class="closebtn"><span>x</span></p>
+      </div>
+      <div class="sidebar_menu">
+        <a href="PNU_HISTORY.html">HISTORY</a>
+        <a href="PNU_LOCATION.html">LOCATION</a>
+        <a href="PNU_PROGRAMS.html">PROGRAMS</a>
+        <a href="PNU_CREDENTIALS.html">CREDENTIALS</a>
+        <a href="PNU_ACCREDITATIONS.html">ACCREDITATIONS</a>
+        <a href="PNU_CONTACT.html">CONTACT DETAILS</a>
+        <a href="PNU_REGFORM.html">REGISTRATION FORM</a>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <img src="PNU.jpg" alt="PNU" class="PNU_background">
+
+  <div class="content">
+    <button class="openbtn" onclick="openNav()"><span>&#9776;</span></button>
+  </div>
+
+<script>
+
+    function openNav() {
+    document.getElementById("sidebar").style.right = "0";
+    document.querySelector(".openbtn span").classList.add('hide');
+    document.querySelector(".sidebar").classList.add('opened');}
+
+
+    function closeNav() {
+    document.getElementById("sidebar").style.right = "-300px";
+    document.querySelector(".openbtn span").classList.remove('hide');
+    document.querySelector(".sidebar").classList.remove('opened');
+}
+
+document.getElementById("downloadBtn").addEventListener("click", function() {
+   
+   alert("PNU Registration Form successfully downloaded!");
+});
+
+</script>
+
+</body>
+</html>

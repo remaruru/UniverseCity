@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<title>Universe-City</title>
+
+<style>
+  body { font-family: Arial, sans-serif; background-color: #EDFBFF; }
+  .navbar { display: flex; align-items: center; background-color: #345E7D; padding: 1; margin-bottom: 0; width: 100%; font-size: 1.5rem; position: fixed; z-index: 4; font-size: 18px;}
+  .navbar a { color: white; text-decoration: none; margin: 0 1rem; margin-bottom: 0; }
+  .navbar a:hover { text-decoration: underline; }
+  .navbar img {height: 40px}
+  .nav-links {display: flex; align-items: left;}
+  .search {padding-right: 0;}
+  .university-buttons { display: flex; justify-content: center; margin: 2rem 0; }
+  .university-buttons button { padding: 1rem 2rem; margin: 0 1rem; cursor: pointer; }
+  .university-buttons button:hover { background-color: #ddd; }
+  .feu_logo { height: 4.5%; width: 4.5% ; display: flex; margin-top: auto; margin-bottom: auto; padding-left: 15px; padding: 10px;}
+  .feu_banner { display: flex; padding-top: 1px; background-color: rgb(3, 61, 3); color: white; text-align: center; font-size: 25px; margin-top: 40px; margin-bottom: 0px; width: 100%;  position: fixed; z-index: 3;}
+  .feu_banner h1 { padding: 0px; margin: 0px; display: flex;  margin-top: auto; margin-bottom: auto; font-size: 35px;}
+  .container {position: fixed;}
+  .FEU_background {margin-top: 100px; width: 100%; z-index: 2; position: fixed;height: 100%;}
+  .sidebar_menu {z-index: 99;}
+  .sidebar {
+        margin-top: 0px;
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        right: -200px;
+        background-color: rgb(3, 61, 3);
+        transition: 0.3s;
+        padding-top: 1px;
+        z-index: 10;}
+  .sidebar a {
+        margin: 3px; 
+        padding: 10px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        border-bottom: 1px solid rgb(3, 61, 3);
+        margin-top: 30px;}
+  .sidebar a:hover {background-color: rgb(2, 36, 2);}
+  .content {margin-right: 250px; padding: 20px;}
+  .openbtn {
+        font-size: 10px;
+        cursor: pointer;
+        background-color: rgb(3, 61, 3);
+        color: white;
+        border: none;
+        margin-top: 55px;
+        margin-right: 10px;
+        padding: 10px 15px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 999;}
+  .openbtn:hover { background-color: rgb(3, 61, 3);}
+  .openbtn span { font-size: 30px;}
+  .openbtn span.hide { display: none; }
+  .sidebar_menu a {
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-bottom: 10px;} 
+  .closebtn {
+        padding-left: 150px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        transition: 0.3s;
+        padding-top: 0px;
+        padding-bottom: 6px;
+        cursor: pointer;
+        z-index: 99; }
+  .ekis button{position: absolute; margin-top: -20%; left: 80%; background-color: rgb(4, 75, 4) ;}
+  .closebtn:hover { background-color: rgb(3, 49, 3);}
+  .textbox{ background: rgb(0, 0, 0,.6) ; height: 580px; width: 96%; margin-top: 100px; position: absolute; left: 2%; right: 2%; z-index: 5;}
+  .text h1 {color: white; font-size: 40px;; left: 600px; position: absolute; margin-top: 8px;}
+  .description p{position: absolute; font-size: 21px; margin-top: 5%;text-align: center;}
+
+
+
+</style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="#"><img src="logo.png" alt="Universe-city"></a>
+    <div>
+      <a href="front.html">HOME</a>
+      <a href="front.html">COLLEGES</a>
+      <a href="about.html">ABOUT</a>
+    </div>
+
+  </div>
+
+
+  <div class = "feu_banner">
+    <img src="dlsu_logo.png" class="feu_logo" alt="FEU_logo">
+    <h1>
+        De La Salle University
+    </h1>
+
+    <div class="textbox">
+      <div class="text"><h1>HISTORY</h1></div>
+      <div class="description"><p>De La Salle University was established in 1911 by the Catholic teaching congregation Brothers of the Christian Schools (FSC, from the Latin: Fratres Scholarum Christianarum). 
+        The congregation was founded in 1680 as a community of consecrated laymen by St. Jean-Baptiste de La Salle to conduct, “together and by association,” schools that he established first in the northern French city of Rheims, to touch the hearts particularly of poor children, and to inspire them with the Christian spirit.
+        De La Salle’s vision of teachers who “teach minds, touch hearts, and transform lives” led him to document the best practices that would guide the Brothers in their conduct of schools, to introduce pedagogy that could be characterized as distinctly modern, and in 1685, to put up the first ever normal school. 
+        De La Salle was canonized on May 24, 1900, and in recognition of the educational innovations he pioneered that are carried on by the congregation he had founded, he was declared as the Patron Saint of Teachers by Pope Pius XII on May 15, 1950.
+        <br><br>
+        Through most of its history until shortly before it became a university, the school accepted only male students. 
+        Classes started in the new Lasallian school with 125 pupils at the primary and secondary levels. 
+        On February 12, 1912, the school was incorporated as De La Salle College (DLSC) and was granted permission to confer commercial high school diplomas in the same year. 
+        The first group of DLSC graduates—three students—received their diplomas in 1915. 
+        The college started offering a two-year Associate in Arts program in Commerce in 1920. 
+        With its population rising to 425 students, the college transferred to its present location in 1921. 
+        The college had by then established its reputation as an excellent business school. 
+        In a study made by the Board of Educational Survey in 1924, DLSC was acknowledged as the best private school in the Philippines. 
+        In 1931, after adding a year to its commerce program, DLSC would offer its first Bachelor’s Degree program.
+         </p></div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <div class="ekis">
+        <p onclick="closeNav()"  class="closebtn"><span>x</span></p>
+      </div>
+      <div class="sidebar_menu">
+        <a href="historyDLSU.html">HISTORY</a>
+        <a href="locationDLSU.html">LOCATION</a>
+        <a href="programsDLSU.html">PROGRAMS</a>
+        <a href="scholarshipDLSU.html">SCHOLARSHIPS</a>
+        <a href="tuitionDLSU.html">TUITION FEE</a>
+        <a href="credentialsDLSU.html">CREDENTIALS</a>
+        <a href="contactDLSU.html">CONTACT DETAILS</a>
+        <a href="regformDLSU.html">REGISTRATION FORM</a>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <img src="dlsu.jpg" alt="FEU" class="FEU_background" alt="FEU background">
+
+  <div class="content">
+    <button class="openbtn" onclick="openNav()"><span>&#9776;</span></button>
+  </div>
+
+<script>
+
+    document.getElementById('public').addEventListener('click', function() {
+      alert('DIPA TAPOS PINDOT KA NG PINDOT');
+    });
+    document.getElementById('private').addEventListener('click', function() {
+      alert('DIPA TAPOS PINDOT KA NG PINDOT');
+    });
+    function openNav() {
+    document.getElementById("sidebar").style.right = "0";
+    document.querySelector(".openbtn span").classList.add('hide');
+    document.querySelector(".sidebar").classList.add('opened');}
+
+
+    function closeNav() {
+    document.getElementById("sidebar").style.right = "-300px";
+    document.querySelector(".openbtn span").classList.remove('hide');
+    document.querySelector(".sidebar").classList.remove('opened');
+}
+
+</script>
+
+</body>
+</html>

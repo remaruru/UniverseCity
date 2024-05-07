@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>basta yun</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .sidebar {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        background-color: #345E7D;
+        transition: 0.3s;
+        padding-top: 60px;
+    }
+    .sidebar a {
+        padding: 10px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        border-bottom: 1px solid #345E7D; 
+    }
+    .sidebar a:last-child {
+        border-bottom: none; 
+    }
+    .sidebar a:hover {
+        background-color: #345E7D;
+    }
+    .content {
+        margin-right: 250px;
+        padding: 20px;
+    }
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #345E7D;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 999;
+    }
+    .openbtn:hover {
+        background-color: #345E7D;
+    }
+    .openbtn span {
+        font-size: 30px;
+    }
+    .openbtn span.hide {
+        display: none;
+    }
+    
+    .sidebar.opened a {
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-bottom: 5px;
+    }
+    
+    .closebtn {
+        padding: 10px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        border-bottom: 1px solid black; 
+    }
+    .closebtn:hover {
+        background-color: #345E7D;
+    }
+</style>
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+    <a href="#" onclick="closeNav()">Close</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">7</a>
+    <a href="#">8</a>
+    <a href="#">9</a>
+    <a href="#">10</a>
+</div>
+
+<div class="content">
+    <button class="openbtn" onclick="openNav()"><span>&#9776;</span></button>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("sidebar").style.right = "0";
+    document.querySelector(".openbtn span").classList.add('hide');
+    document.querySelector(".sidebar").classList.add('opened'); 
+}
+
+function closeNav() {
+    document.getElementById("sidebar").style.right = "-250px";
+    document.querySelector(".openbtn span").classList.remove('hide');
+    document.querySelector(".sidebar").classList.remove('opened'); 
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Universe-City</title>
+
+<style>
+  body { font-family: Arial, sans-serif; background-color: #EDFBFF; }
+  .navbar { display: flex; align-items: center; background-color: #345E7D; padding: 1; margin-bottom: 0; width: 100%; font-size: 1.5rem; position: fixed; z-index: 4; font-size: 18px;}
+  .navbar a { color: white; text-decoration: none; margin: 0 1rem; margin-bottom: 0; }
+  .navbar a:hover { text-decoration: underline; }
+  .navbar img {height: 40px}
+  .nav-links {display: flex; align-items: left;}
+  .search {padding-right: 0;}
+  .university-buttons { display: flex; justify-content: center; margin: 2rem 0; }
+  .university-buttons button { padding: 1rem 2rem; margin: 0 1rem; cursor: pointer; }
+  .university-buttons button:hover { background-color: #ddd; }
+  .pup_logo { height: 4.5%; width: 4.5% ; display: flex; margin-top: auto; margin-bottom: auto; padding-left: 15px; padding: 10px;}
+  .pup_banner { display: flex; padding-top: 1px; background-color: rgb(163, 17, 17); color: white; text-align: center; font-size: 25px; margin-top: 40px; margin-bottom: 0px; width: 100%;  position: fixed; z-index: 3;}
+  .pup_banner h1 { padding: 0px; margin: 0px; display: flex;  margin-top: auto; margin-bottom: auto; font-size: 35px;}
+  .container {position: fixed;}
+  .PUP_background {margin-top: 100px; width: 100%; z-index: 2; position: fixed;}
+  .sidebar_menu {z-index: 99;}
+  .sidebar {
+        margin-top: 0px;
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        right: -200px;
+        background-color: rgb(163, 17, 17);
+        transition: 0.3s;
+        padding-top: 1px;
+        z-index: 10;}
+  .sidebar a:hover {background-color: rgb(95, 13, 13);}
+  .content {margin-right: 250px; padding: 20px;}
+  .openbtn {
+        cursor: pointer;
+        background-color: rgb(163, 17, 17);
+        color: white;
+        border: none;
+        margin-top: 55px;
+        margin-right: 10px;
+        padding: 10px 15px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 999;}
+  .openbtn:hover { background-color: rgb(163, 17, 17);}
+  .openbtn span { font-size: 25px;}
+  .openbtn span.hide { display: none; }
+  .sidebar_menu a {
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-bottom: 30px;
+        padding: 10px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        }
+  .closebtn {
+        padding-left: 150px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        transition: 0.3s;
+        padding-top: 0px;
+        padding-bottom: 6px;
+        cursor: pointer;
+        z-index: 99; }
+  .closebtn:hover { background-color: rgb(163, 17, 17);}
+  .textbox{ background: rgb(0, 0, 0,.4) ; height: 580px; width: 96%; margin-top: 100px; position: absolute; left: 2%; right: 2%; z-index: 5;}
+  .textbox h1 {color: white; font-size: 29px; z-index: 6; padding-left: 40.5%; margin-top: 8px;}
+  .textbox h2 {color: white; font-size: 25px; z-index: 6; text-align: center;}
+  .textbox h2 a {color: white; font-size: 25px; z-index: 6; text-align: center;}
+</style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="HOMEPAGE.html"><img src="Universe-city.png" alt="Universe-city"></a>
+    <div>
+      <a href="front.html">HOME</a>
+      <a href="front.html">COLLEGES</a>
+      <a href="about.html">ABOUT</a>
+    </div>
+
+  </div>
+
+
+  <div class = "pup_banner">
+    <img src="PUP_LOGO.png" class="pup_logo" alt="PUP_logo">
+    <h1>
+        Polytechnic University of the Philippines
+    </h1>
+
+    <div class="textbox">
+      <h1>CONTACT DETAILS</h1>
+      <h2>Email:<br>inquire@pup.edu.ph</h2>
+      <h2>Facebook Page:<br><a href="https://www.facebook.com/ThePUPOfficial/">https://www.facebook.com/ThePUPOfficial/</a></h2>
+      <h2>Office of the University Registrar<br>(632) 5335-1787 or 5335-1777 local 285</h2>
+      <h2>Admission Services<br>(632) 5335-1798 or (632) 5335-1799</h2>
+      <h2>Office of the Vice President for Branches and Campusess<br>(632) 5335-1787 or 5335-1777 local 205</h2>
+      <h2>Open University System<br>(632) 5335-1787 or 5335-1777 local 251</h2>
+
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <div>
+        <p onclick="closeNav()" class="closebtn"><span>x</span></p>
+      </div>
+      <div class="sidebar_menu">
+        <a href="PUP_HISTORY.html">HISTORY</a>
+        <a href="PUP_LOCATION.html">LOCATION</a>
+        <a href="PUP_PROGRAMS.html">PROGRAMS</a>
+        <a href="PUP_CREDENTIALS.html">CREDENTIALS</a>
+        <a href="PUP_ACCREDITATIONS.html">ACCREDITATIONS</a>
+        <a href="PUP_CONTACT.html">CONTACT DETAILS</a>
+        <a href="PUP_REGFORM.html">REGISTRATION FORM</a>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <img src="PUP.jpg" alt="PUP" class="PUP_background" alt="PUP background">
+
+  <div class="content">
+    <button class="openbtn" onclick="openNav()"><span>&#9776;</span></button>
+  </div>
+
+<script>
+
+    document.getElementById('public').addEventListener('click', function() {
+      alert('DIPA TAPOS PINDOT KA NG PINDOT');
+    });
+    document.getElementById('private').addEventListener('click', function() {
+      alert('DIPA TAPOS PINDOT KA NG PINDOT');
+    });
+    function openNav() {
+    document.getElementById("sidebar").style.right = "0";
+    document.querySelector(".openbtn span").classList.add('hide');
+    document.querySelector(".sidebar").classList.add('opened');}
+
+
+    function closeNav() {
+    document.getElementById("sidebar").style.right = "-300px";
+    document.querySelector(".openbtn span").classList.remove('hide');
+    document.querySelector(".sidebar").classList.remove('opened');
+}
+
+</script>
+
+</body>
+</html>

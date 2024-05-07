@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Universe-City</title>
+
+<style>
+  body { font-family: Arial, sans-serif; background-color: #EDFBFF; }
+  .navbar { display: flex; align-items: center; background-color: #345E7D; padding: 1; margin-bottom: 0; width: 100%; font-size: 1.5rem; position: fixed; z-index: 4; font-size: 18px;}
+  .navbar a { color: white; text-decoration: none; margin: 0 1rem; margin-bottom: 0; }
+  .navbar a:hover { text-decoration: underline; }
+  .navbar img {height: 40px}
+  .nav-links {display: flex; align-items: left;}
+  .udm_logo { height: 4.5%; width: 4.5% ; display: flex; margin-top: auto; margin-bottom: auto; padding-left: 15px; padding: 10px;}
+  .udm_banner { display: flex; padding-top: 1px; background-color: rgb(12, 58, 23); color: white; text-align: center; font-size: 25px; margin-top: 40px; margin-bottom: 0px; width: 100%;  position: fixed; z-index: 3;}
+  .udm_banner h1 { padding: 0px; margin: 0px; display: flex;  margin-top: auto; margin-bottom: auto; font-size: 35px;}
+  .container {position: fixed;}
+  .UDM_background {margin-top: 100px; width: 100%; z-index: 2; position: fixed;}
+  .sidebar_menu {z-index: 99;}
+  .sidebar {
+        margin-top: 0px;
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        right: -200px;
+        background-color: rgb(12, 58, 23);
+        transition: 0.3s;
+        padding-top: 1px;
+        z-index: 10;}
+  .sidebar a:hover {background-color: rgb(13, 95, 57);}
+  .content {margin-right: 250px; padding: 20px;}
+  .openbtn {
+        cursor: pointer;
+        background-color: rgb(12, 58, 23);
+        color: white;
+        border: none;
+        margin-top: 55px;
+        margin-right: 10px;
+        padding: 10px 15px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 999;}
+  .openbtn:hover { background-color: rgb(12, 58, 23);}
+  .openbtn span { font-size: 25px;}
+  .openbtn span.hide { display: none; }
+  .sidebar_menu a {
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-bottom: 30px;
+        padding: 10px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        }
+  .closebtn {
+        padding-left: 150px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        transition: 0.3s;
+        padding-top: 0px;
+        padding-bottom: 6px;
+        cursor: pointer;
+        z-index: 99; }
+  .closebtn:hover { background-color: rgb(12, 58, 23);}
+  .textbox{ background: rgb(0, 0, 0,.4) ; height: 580px; width: 96%; margin-top: 100px; position: absolute; left: 2%; right: 2%; z-index: 5;}
+  .textbox h1 {color: rgb(255, 255, 255); font-size: 29px; z-index: 6; margin-top:15px;}
+  .textbox h2 {color: white; font-size: 27px; z-index: 6; text-align: center; line-height: 2;}
+  .textbox h2 a {color: white}
+  table{ margin-left: auto; margin-right: auto; margin-top: 10px;}
+  .textbox a {color: white; font-size: 29px; z-index: 6; text-align: center; margin-left: auto; margin-right: auto; margin-top: 8px; text-decoration: none;}
+  th {height: 100px; font-size: 35px;}
+  td {height: 100px; font-size: 27px;}
+
+
+</style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="HOMEPAGE.html"><img src="Universe-city.png" alt="Universe-city"></a>
+    <div>
+      <a href="front.html">HOME</a>
+      <a href="front.html">COLLEGES</a>
+      <a href="about.html">ABOUT</a>
+    </div>
+  </div>
+
+
+  <div class = "udm_banner">
+    <img src="UDM_LOGO.png" class="udm_logo" alt="udm_logo">
+    <h1>
+        Universidad De Manila
+    </h1>
+
+    <div class="textbox">
+        <h1><a href="UDM_PROGRAMS.html">PROGRAMS</a></h1>
+        <table>
+            <tr><th>College of Law</th></tr>
+            <tr><td>Juris Doctor</td></tr>
+        </table>
+    </div>
+ 
+    <div class="sidebar" id="sidebar">
+      <div>
+        <p onclick="closeNav()" class="closebtn"><span>x</span></p>
+      </div>
+      <div class="sidebar_menu">
+        <a href="UDM_HISTORY.html">HISTORY</a>
+        <a href="UDM_LOCATION.html">LOCATION</a>
+        <a href="UDM_PROGRAMS.html">PROGRAMS</a>
+        <a href="UDM_CREDENTIALS.html">CREDENTIALS</a>
+        <a href="UDM_ACCREDITATIONS.html">ACCREDITATIONS</a>
+        <a href="UDM_CONTACT.html">CONTACT DETAILS</a>
+        <a href="UDM_REGFORM.html">REGISTRATION FORM</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <img src="UDM.png" alt="UDM" class="UDM_background">
+
+  <div class="content">
+    <button class="openbtn" onclick="openNav()"><span>&#9776;</span></button>
+  </div>
+
+
+
+
+  <script>
+
+  function openNav() {
+    document.getElementById("sidebar").style.right = "0";
+    document.querySelector(".openbtn span").classList.add('hide');
+    document.querySelector(".sidebar").classList.add('opened');}
+
+
+  function closeNav() {
+    document.getElementById("sidebar").style.right = "-200px";
+    document.querySelector(".openbtn span").classList.remove('hide');
+    document.querySelector(".sidebar").classList.remove('opened');}
+
+
+  </script>
+</body>
+</html>

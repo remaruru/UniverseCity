@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Universe-City</title>
+<style>
+  body { font-family: Arial, sans-serif; background-color: #EDFBFF; 
+  background-image: url('background.png');
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #345E7D;
+    padding: 1rem; 
+    font-size: 18px;
+  }
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem; 
+  }
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  .navbar img {
+    height: 40px;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+ .banner { text-align: center; margin: 2rem 0; }
+ .banner h1 { font-size: 2.5rem; }
+ .banner p { font-size: 1.2rem; }
+ .university-buttons { display: flex; justify-content: center; margin: 2rem 0; }
+ .university-buttons button { padding: 1rem 2rem; margin: 0 1rem; cursor: pointer; }
+ .university-buttons button:hover { background-color: #ddd; }
+ body {margin: 0; padding: 0; 
+  }
+  .dropdown { position: relative; margin-right: 0.5rem; }
+
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+
+ .dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+
+ .dropdown-content a:hover {
+   background-color: #ddd;
+ }
+
+ .dropdown:hover .dropdown-content {
+   display: block;
+ }
+</style>
+</head>
+<body>
+  <div class="navbar" style="padding: 0.5rem 0; margin: 0;">
+    <a href="#"><img src="Universe-city.png" alt="Search"></a>
+    <div class="nav-links">
+      <a href="front.html">HOME</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">COLLEGES</a>
+        <div class="dropdown-content">
+          <a href="publicmenu.html">Public</a>
+          <a href="privatemenu.html">Private</a>
+        </div>
+      </div>
+      <a href="about.html">ABOUT</a>
+    </div>
+  </div>
+  <style>
+   .floating-image {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; 
+}
+   .carousel-container {
+    position: relative;
+    width: 98.4vw; 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden;
+    border: 2px solid black;
+}
+  
+  .carousel-slide {
+    display: flex;
+    width: 100vw; 
+    transition: transform 0.5s ease-in-out;
+}
+  
+.carousel-img {
+  width: 255px;
+  height: 270px;
+  flex-shrink: 0;
+}
+  
+  .carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #bbb; 
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #333; 
+  }
+  
+    .prev,
+    .next {
+      display: none;
+    }
+    .university-section {
+  
+    text-align: center;
+  }
+  .universities {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .public, .private {
+    width: 50%;
+  }
+  .university-emblem {
+    width: 410px; 
+  }
+  .vertical-line {
+    border-left: 2px solid black;
+    height: auto;
+  }
+  .public a, .private a {
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  .public h3,
+.private h3 {
+  color: black; 
+  font-size: 2rem;
+  font-style: bold;  
+}
+  </style>
+  
+  <body>
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img class="carousel-img" src="PLM.jpg" alt="Image 1">
+        <img class="carousel-img" src="PUP.jpg" alt="Image 2">
+        <img class="carousel-img" src="NU.jfif" alt="Image 3">
+        <img class="carousel-img" src="Emilio Aguinaldo College.jfif" alt="Image 4">
+        <img class="carousel-img" src="Facade_1.jpg" alt="Image 5">
+        <img class="carousel-img" src="FEATI University.jpg" alt="Image 6">
+        <img class="carousel-img" src="Central Colleges Of The Philippines.jpg" alt="Image 7">
+        <img class="carousel-img" src="Asia Pacific College.jfif" alt="Image 8">
+        <img class="carousel-img" src="Arellano University.jfif" alt="Image 9">
+        <img class="carousel-img" src="PNU_Manila.jpg" alt="Image 10">
+        <img class="carousel-img" src="UDM.png" alt="Image 11">
+        <img class="carousel-img" src="LPU.jfif" alt="Image 12">
+        <img class="carousel-img" src="R (1).jfif" alt="Image 13">
+        <img class="carousel-img" src="Facade_1.jpg" alt="Image 14">
+        <img class="carousel-img" src="FEATI University.jpg" alt="Image 15">
+        <img class="carousel-img" src="Central Colleges Of The Philippines.jpg" alt="Image 16">
+        <img class="carousel-img" src="Asia Pacific College.jfif" alt="Image 17">
+        <img class="carousel-img" src="Arellano University.jfif" alt="Image 18">
+        <img class="carousel-img" src="PNU_Manila.jpg" alt="Image 19">
+        <img class="carousel-img" src="PLM.jpg" alt="Image 1">
+        <img class="carousel-img" src="PUP.jpg" alt="Image 2">
+        <img class="carousel-img" src="NU.jfif" alt="Image 3">
+        <img class="carousel-img" src="Emilio Aguinaldo College.jfif" alt="Image 4">
+        <img class="carousel-img" src="Facade_1.jpg" alt="Image 5">
+        <img class="carousel-img" src="FEATI University.jpg" alt="Image 6">
+        <img class="carousel-img" src="Central Colleges Of The Philippines.jpg" alt="Image 7">
+        <img class="carousel-img" src="Asia Pacific College.jfif" alt="Image 8">
+        <img class="carousel-img" src="Arellano University.jfif" alt="Image 9">
+        <img class="carousel-img" src="PNU_Manila.jpg" alt="Image 10">
+        <img class="carousel-img" src="UDM.png" alt="Image 11">
+        <img class="carousel-img" src="LPU.jfif" alt="Image 12">
+        <img class="carousel-img" src="R (1).jfif" alt="Image 13">
+        <img class="carousel-img" src="Facade_1.jpg" alt="Image 14">
+        <img class="carousel-img" src="FEATI University.jpg" alt="Image 15">
+        <img class="carousel-img" src="Central Colleges Of The Philippines.jpg" alt="Image 16">
+        <img class="carousel-img" src="Asia Pacific College.jfif" alt="Image 17">
+        <img class="carousel-img" src="Arellano University.jfif" alt="Image 18">
+        <img class="carousel-img" src="PNU_Manila.jpg" alt="Image 19">
+        <img class="carousel-img" src="PLM.jpg" alt="Image 1">
+        <img class="carousel-img" src="PUP.jpg" alt="Image 2">
+        <img class="carousel-img" src="NU.jfif" alt="Image 3">
+        <img class="carousel-img" src="Emilio Aguinaldo College.jfif" alt="Image 4">
+        <img class="carousel-img" src="Facade_1.jpg" alt="Image 5">
+        <img class="carousel-img" src="FEATI University.jpg" alt="Image 6">
+        <img class="carousel-img" src="Central Colleges Of The Philippines.jpg" alt="Image 7">
+        <img class="carousel-img" src="Asia Pacific College.jfif" alt="Image 8">
+        <img class="carousel-img" src="Arellano University.jfif" alt="Image 9">
+        <img class="carousel-img" src="PNU_Manila.jpg" alt="Image 10">
+        <img class="carousel-img" src="UDM.png" alt="Image 11">
+        <img class="carousel-img" src="LPU.jfif" alt="Image 12">
+        <img class="carousel-img" src="R (1).jfif" alt="Image 13">
+        <img class="carousel-img" src="Facade_1.jpg" alt="Image 14">
+        <img class="carousel-img" src="FEATI University.jpg" alt="Image 15">
+        <img class="carousel-img" src="Central Colleges Of The Philippines.jpg" alt="Image 16">
+        <img class="carousel-img" src="Asia Pacific College.jfif" alt="Image 17">
+        <img class="carousel-img" src="Arellano University.jfif" alt="Image 18">
+        <img class="carousel-img" src="PNU_Manila.jpg" alt="Image 19">
+      </div>
+      <div class="floating-image">
+        <img src="image0.png" alt="Floating Image">
+      </div>
+    </div>
+    </div>
+      <div class="carousel-dots"></div>
+    </div>
+    <script>
+      const carouselSlide = document.querySelector('.carousel-slide');
+      const carouselImages = document.querySelectorAll('.carousel-img');
+      const totalSlides = carouselImages.length;
+      const slideWidth = carouselImages[0].clientWidth;
+      let counter = 0;
+    
+      function goToSlide(index) {
+        carouselSlide.style.transition = 'transform 0.5s ease-in-out';
+        carouselSlide.style.transform = `translateX(${-slideWidth * index}px)`;
+        counter = index;
+      }
+    
+      function nextSlide() {
+        counter = (counter + 1) % totalSlides;
+        goToSlide(counter);
+      }
+    
+      setInterval(nextSlide, 2500); //2.5 seconds
+    </script>
+    
+  </body>
+
+  <div class="banner">
+    <div class="university-section">
+      <div class="universities">
+        <div class="public">
+         
+          <a href="link-to-public-universities.html"><h3>PUBLIC UNIVERSITIES</h3></a>
+         
+         
+          <a href="publicmenu.html"><img src="publicss.png" alt="Public University 2" class="university-emblem"></a>
+         
+        </div>
+        <div class="vertical-line"></div>
+        <div class="private">
+          
+          <a href="link-to-private-universities.html"><h3>PRIVATE UNIVERSITIES</h3></a>
+         
+          
+          <a href="privatemenu.html"><img src="privatess.png" alt="Private University 2" class="university-emblem"></a>
+          
+      </div>
+    </div>
+    
+  
+  </body>
+  
+</body>
+</html>
