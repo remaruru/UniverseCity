@@ -1,2 +1,1 @@
-# UniverseCity
- UniverseCity
+[Open front.html](front.html)
